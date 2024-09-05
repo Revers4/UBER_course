@@ -10,6 +10,17 @@
     bottom: 0;
     z-index: -1;
 }
+@mixin img-settings {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@mixin flex-x-y-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 $fontColor: #FFFFFF;
 $fontColor-black: #222222;
 *{
@@ -76,7 +87,7 @@ $fontColor-black: #222222;
     width: 285px;
     height: 32px;
     background-image: url(../icons/Uber.png);
-    @include bg-default;
+    @include img-settings;
 }
 .logo_caption{
     font-size: 13px;
@@ -177,6 +188,9 @@ $fontColor-black: #222222;
 }
 .section-2{
     position: relative;
+    .row{
+        margin-bottom: 20px;
+    }
 }
 .section-2__bg{
     background-image: url(../img/mobile_bg.png);
@@ -188,10 +202,58 @@ $fontColor-black: #222222;
     justify-content: center;
     flex-direction: column;
 }
-.card-1__bg{
-    background-image: url(../img/Карточка\1.png);
-    height: 100%;
+.heading__paragref{
+    font-size: 17px;
+    text-align: center;
+    color: #222222;
+}
+[class^="card__bg-"] {
+    @include img-settings;
     width: 100%;
+    max-width: 320px;
+    height: 280px;
+    padding-top: 90px;
+    padding-bottom: 34px;
+    @include flex-x-y-center;
+    justify-content: space-between;
+}
+.card__bg-1{
+    background-image: url(../img/card1.png);
+}
+.card__bg-2{
+    background-image: url(../img/card2.png);
+}
+.card__bg-3{
+    background-image: url(../img/card3.png);
+}
+.card__bg-4{
+    background-image: url(../img/card4.png);
+}
+.card__bg-5{
+    background-image: url(../img/card5.png);
+}
+.card__bg-6{
+    background-image: url(../img/card6.png);
+}
+.section-2 .col-lg-4{
+    display: flex;
+    justify-content: center;
+}
+.card__heading{
+    color: $fontColor;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+.card__button{
+    @include flex-x-y-center;
+    background-color: #000000;
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
 }
 @media (max-width: 1200px) {
     .header-about{
@@ -240,6 +302,9 @@ $fontColor-black: #222222;
     .about-block{
         flex-direction: column;
     }
+    [class^="card__bg-"] {
+        max-width: 520px;
+    }
 }
 @media (max-width: 768px) {
     .logo-icon-name{
@@ -276,5 +341,8 @@ $fontColor-black: #222222;
     }
     .section-1 .col-lg-6{
         padding: 0 15px;
+    }
+    [class^="card__bg-"] {
+        max-width: 320px;
     }
 }
