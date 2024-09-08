@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background: no-repeat cover center;
     position: absolute;
     left: 0;
     right: 0;
@@ -27,14 +28,9 @@ $fontColor-black: #222222;
     font-family: "Roboto", sans-serif;
 }
 .header__top .navbar{
-    background-color: #212121;
+    background-color: $fontColor-black;
 }
 .header__top .navbar-nav{
-    flex: auto;
-    li{
-    width: 100%;
-    text-align: center;
-    }
     li:not(:last-of-type){
         border-right: dotted #000000 2px;
     }
@@ -49,42 +45,21 @@ $fontColor-black: #222222;
 .dark-bg{
     background-color: rgba(0, 0, 0, 0.6);
 }
-.header__bottom-bg{
-    background-image: url(../img/uber_bg.png);
-    @include bg-default;
-}
-.header-contacts{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    figure{
-        margin: 0;
-    }
+.header__bottom{
+    background: url("../img/uber_bg.png") no-repeat center/cover;
 }
 .header__contact{
     color: $fontColor;
-    display: flex;
-    address{
-        margin: 0;
-        margin-right: 32px;
-    }
-    p{
-        margin: 0;
-    }
 }
 .header__contact-call{
     font-size: 12px;
     font-weight: 300;
-    text-align: end;
 }
 .logo{
-    font-size: 13px;
     color: $fontColor;
 }
 .logo-icon-name{
-    width: 285px;
+    width: 290px;
     height: 32px;
     background-image: url(../icons/Uber.png);
     @include img-settings;
@@ -142,24 +117,35 @@ $fontColor-black: #222222;
     padding: 25px 40px;
     padding-bottom: 22px;
 }
-.section-1 .col-lg-6{
+.advantages .col-lg-6{
     padding: 0 30px;
     margin-bottom: 12px;
 }
 .heading-2{
-    color: $fontColor-black;
     font-size: 38px;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
 }
-.heading-3{
-    background-color: $fontColor-black;
+.heading-2_black{
+    color: $fontColor-black;
+}
+.heading-2_white{
     color: $fontColor;
+}
+.heading-3{
     padding: 8px 14px;
     margin-bottom: 16px;
     font-size: 11px;
     text-transform: uppercase;
+}
+.heading-3_black{
+    background-color: $fontColor-black;
+    color: $fontColor;
+}
+.heading-3_white{
+    color: $fontColor-black;
+    background-color: $fontColor;
 }
 .blue-icon{
     display: flex;
@@ -186,26 +172,23 @@ $fontColor-black: #222222;
     color: #1EACC7;
     display: block;
 }
-.section-2{
-    position: relative;
-    .row{
-        margin-bottom: 20px;
-    }
-}
-.section-2__bg{
+.opportunities{
     background-image: url(../img/mobile_bg.png);
-    @include bg-default;
-}
-.heading{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    background-position: center;
 }
 .heading__paragref{
     font-size: 17px;
     text-align: center;
-    color: #222222;
+}
+.heading__paragref_black{
+    color: $fontColor-black;
+}
+.heading__paragref_white{
+    color: $fontColor;
+}
+.blue-bg{
+    background-color: #070716;
+    padding-top: 58px
 }
 [class^="card__bg-"] {
     @include img-settings;
@@ -235,7 +218,7 @@ $fontColor-black: #222222;
 .card__bg-6{
     background-image: url(../img/card6.png);
 }
-.section-2 .col-lg-4{
+.opportunities .col-lg-4{
     display: flex;
     justify-content: center;
 }
@@ -255,6 +238,144 @@ $fontColor-black: #222222;
     height: 30px;
     padding: 0;
 }
+.opportunities .blue-bg .container-md{
+    padding-bottom: 300px;
+}
+.description{
+    padding-top: 220px;
+    padding-bottom: 137px;
+}
+.list{
+    h2{
+        font-size: 22px;
+    }
+    ul{
+        list-style: none;
+        padding-left: 32px;
+    }
+    p{
+        font-size: 18px;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    li{
+        padding-bottom: 10px;
+        position: relative;
+        font-size: 18px;
+        color: $fontColor-black;
+        &::before{
+            position: absolute;
+            top: 3px;
+            left: -24px;
+            width: 21px;
+            height: 21px;
+        }
+    }
+}
+.list_blue{
+    h2{
+        color: #1CA8C3;
+    }
+    p{
+        color: #1CA8C3;
+    }
+    li{
+        &::before{
+            content: url("../icons/check_blue.png");
+        }
+    }
+}
+.list_red{
+    h2{
+        color: #FF5656;
+    }
+    p{
+        color: #FF5656;
+    }
+    li{
+        &::before{
+            content: url("../icons/check_red.png");
+        }
+    }
+}
+.conditions{
+    .container-md{
+        padding-top: 68px;
+        padding-bottom: 90px;
+    }
+    .row{
+        margin-bottom: 36px;
+    }
+}
+.cities{
+    background-color: #080816;
+    padding: 46px 0;
+    height: 716px;
+}
+.cities-bg{
+    background: url("../img/world_bg.png") no-repeat center / auto;
+}
+.show{
+    font-size: 16px;
+    color: #1FBAD6;
+    cursor: pointer;
+}
+.line{
+    height: 7px;
+    width: 300px;
+    background-color: #1FBAD6;
+}
+.footer{
+    padding-bottom: 66px;
+    ul{
+        list-style: none;
+    }
+    .social{
+        li{
+            cursor: pointer;
+        }
+    }
+    .links{
+        li{
+            cursor: pointer;
+        }
+        text-transform: uppercase;
+        ul:first-of-type{
+            li{
+                font-size: 15px;
+            }
+            li:not(:last-of-type){
+               margin-right: 40px;
+            }   
+        }
+        ul:nth-of-type(2){
+            li{
+                font-size: 11px;
+            }
+            li:not(:last-of-type){
+                margin-right: 20px;
+             }   
+        }
+        p{
+            font-size: 11px;
+            color: #1FBAD6;
+            margin: 0;
+        }
+    }
+    figure{
+        margin: 0;
+    }
+}
+.dowload{
+    align-items: start;
+    justify-content: end;
+}
+.pt-6{
+    padding-top: 58px;
+}
+.pb-6{
+    padding-bottom: 64px;
+}
 @media (max-width: 1200px) {
     .header-about{
         padding-top: 40px;
@@ -266,13 +387,19 @@ $fontColor-black: #222222;
             font-size: 28px;
         }
     }
+    .header__button_top{
+        padding: 12px 18px;
+        padding-bottom: 9px;
+    }
 }
 @media (max-width: 992px) {
     .header__top .navbar-nav{
         li{
-            text-align: start;
             border: none !important;
         }
+    }
+    .heading-2{
+        font-size: 26px;
     }
     .logo-icon-name{
         width: 242px;
@@ -280,10 +407,6 @@ $fontColor-black: #222222;
     }
     .uber-number{
         font-size: 18px;
-    }
-    .header__button_top{
-        padding: 12px 18px;
-        padding-bottom: 9px;
     }
     .header-about{
         padding-top: 40px;
@@ -305,6 +428,32 @@ $fontColor-black: #222222;
     [class^="card__bg-"] {
         max-width: 520px;
     }
+    .opportunities .blue-bg .container-md{
+        padding-bottom: 0;
+    }
+    .conditions{
+        .container-md{
+            padding-top: 48px;
+            padding-bottom: 50px;
+        }
+        .row{
+            margin-bottom: 26px;
+        }
+    }
+    .cities{
+        padding: 38px 0;
+        height: 600px;
+    }
+    .social{
+        display: flex;
+        justify-content: center;
+    }
+    .dowload{
+        justify-content: center;
+    }
+    .footer{
+        padding-bottom: 30px;
+    }
 }
 @media (max-width: 768px) {
     .logo-icon-name{
@@ -325,6 +474,9 @@ $fontColor-black: #222222;
         padding: 7px 9px;
         padding-bottom: 4px;
     }
+    .heading-2{
+        font-size: 16px;
+    }
     .header-about{
         padding-top: 40px;
         padding-bottom: 34px;
@@ -339,10 +491,40 @@ $fontColor-black: #222222;
         padding: 20px 25px;
         padding-bottom: 17px;
     }
-    .section-1 .col-lg-6{
+    .advantages .col-lg-6{
         padding: 0 15px;
     }
     [class^="card__bg-"] {
         max-width: 320px;
+    }
+    .blue-bg{
+        padding-top: 22px;
+    }
+    .list{
+        h2{
+            font-size: 16px;
+        }
+        p{
+            font-size: 14px;
+        }
+        li{
+            font-size: 14px;
+        }
+    }
+    .conditions{
+        .container-md{
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+        .row{
+            margin-bottom: 26px;
+        }
+    }
+    .cities{
+        padding: 24px 0;
+        height: 360px;
+    }
+    .cities-bg{
+        background-size: cover;
     }
 }
