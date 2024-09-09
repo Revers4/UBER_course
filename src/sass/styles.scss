@@ -24,6 +24,9 @@
 }
 $fontColor: #FFFFFF;
 $fontColor-black: #222222;
+$fontColor-blue: #1EACC7;
+$fontColor-red: #FF5656;
+$fontColor_footer-blue: #1FBAD6;
 *{
     font-family: "Roboto", sans-serif;
 }
@@ -72,10 +75,10 @@ $fontColor-black: #222222;
 .button{
     text-transform: uppercase;
     font-size: 14px;
-    background: linear-gradient(to bottom, #1EACC7, #4CE2FF);
+    background: linear-gradient(to bottom, $fontColor-blue, #4CE2FF);
     color: $fontColor;
     border: none;
-    border-bottom:3px solid #1EACC7;
+    border-bottom:3px solid $fontColor-blue;
     border-radius: 4px;
 }
 .header__button_top{
@@ -92,16 +95,11 @@ $fontColor-black: #222222;
     padding-top: 50px;
     padding-bottom: 123px;
     h1{
-        height: 60px;
-        text-transform: uppercase;
         font-size: 60px;
-        font-weight: 900;
         margin-bottom: 20px;
     }
     h2{
-        text-transform: uppercase;
        font-size: 36px; 
-       font-weight: 700;
        margin-bottom: 24px;
     }
     p{
@@ -154,7 +152,7 @@ $fontColor-black: #222222;
     flex-shrink: 0;
     width: 116px;
     height: 116px;
-    background-color: #1EACC7;
+    background-color: $fontColor-blue;
     border-radius: 50%;
     margin-right: 24px;
 }
@@ -169,8 +167,7 @@ $fontColor-black: #222222;
 }
 .about-block__p_blue{
     font-size: 18px;
-    color: #1EACC7;
-    display: block;
+    color: $fontColor-blue;
 }
 .opportunities{
     background-image: url(../img/mobile_bg.png);
@@ -287,10 +284,10 @@ $fontColor-black: #222222;
 }
 .list_red{
     h2{
-        color: #FF5656;
+        color: $fontColor-red;
     }
     p{
-        color: #FF5656;
+        color: $fontColor-red;
     }
     li{
         &::before{
@@ -317,28 +314,23 @@ $fontColor-black: #222222;
 }
 .show{
     font-size: 16px;
-    color: #1FBAD6;
+    color: $fontColor_footer-blue;
     cursor: pointer;
 }
 .line{
     height: 7px;
     width: 300px;
-    background-color: #1FBAD6;
+    background-color: $fontColor_footer-blue;
 }
 .footer{
     padding-bottom: 66px;
     ul{
         list-style: none;
     }
-    .social{
-        li{
-            cursor: pointer;
-        }
+    li{
+        cursor: pointer;
     }
     .links{
-        li{
-            cursor: pointer;
-        }
         text-transform: uppercase;
         ul:first-of-type{
             li{
@@ -358,7 +350,7 @@ $fontColor-black: #222222;
         }
         p{
             font-size: 11px;
-            color: #1FBAD6;
+            color: $fontColor_footer-blue;
             margin: 0;
         }
     }
