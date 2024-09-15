@@ -1,298 +1,215 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@mixin bg-default {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background: no-repeat cover center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-}
-@mixin img-settings {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-@mixin flex-x-y-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-$fontColor: #FFFFFF;
-$fontColor-black: #222222;
-$fontColor-blue: #1EACC7;
-$fontColor-red: #FF5656;
-$fontColor_footer-blue: #1FBAD6;
+@import "mixins.scss";
+@import "variables.scss";
 *{
     font-family: "Roboto", sans-serif;
 }
-.header__top .navbar{
-    background-color: $fontColor-black;
-}
-.header__top .navbar-nav{
-    li:not(:last-of-type){
-        border-right: dotted #000000 2px;
-    }
-    a{
-        font-size: 15px;
-        font-weight: 300;
-        color: $fontColor;
-        white-space: nowrap;
-        padding: 4px 8px;
-    }
-}
-.dark-bg{
-    background-color: rgba(0, 0, 0, 0.6);
-}
-.header__bottom{
-    background: url("../img/uber_bg.png") no-repeat center/cover;
-}
-.header__contact{
-    color: $fontColor;
-}
-.header__contact-call{
-    font-size: 12px;
-    font-weight: 300;
-}
-.logo{
-    color: $fontColor;
-}
-.logo-icon-name{
-    width: 290px;
-    height: 32px;
-    background-image: url(../icons/Uber.png);
-    @include img-settings;
-}
-.logo_caption{
-    font-size: 13px;
-    font-weight: 100;
-    padding-top: 4px;
-}
-.button{
-    text-transform: uppercase;
-    font-size: 14px;
-    background: linear-gradient(to bottom, $fontColor-blue, #4CE2FF);
-    color: $fontColor;
-    border: none;
-    border-bottom:3px solid $fontColor-blue;
-    border-radius: 4px;
-}
-.header__button_top{
-    padding: 16px 22px;
-    padding-bottom: 13px;
-}
-.uber-number{
-    font-size: 22px;
-    text-align: center;
-}
-.header-about{
-    color: $fontColor;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 123px;
-    h1{
-        font-size: 60px;
-        margin-bottom: 20px;
-    }
-    h2{
-       font-size: 36px; 
-       margin-bottom: 24px;
-    }
-    p{
-        font-size: 18px;
-        margin-bottom: 58px;
-        &:not(:last-of-type){
-            margin-bottom: 38px;
+/*Стили header*/
+.header{
+    &__top {
+        .navbar{
+            background-color: $fontColor-black;
+            &-nav{
+                li:not(:last-of-type){
+                    border-right: dotted #000000 2px;
+                }
+                a{
+                    font: {
+                        size: 15px;
+                        weight: 300;
+                    }
+                    color: $fontColor;
+                    white-space: nowrap;
+                    padding: 4px 8px;
+                }
+            }
         }
     }
+    &__bottom{
+        @include background('../img/uber_bg.png');
+    }
 }
-.button_about{
-    font-size: 18px;
-    padding: 25px 40px;
-    padding-bottom: 22px;
+/*Блок с кнопкой "Заказать звонок"*/
+.logo-contact{
+    background-color: rgba(0, 0, 0, 0.6);
+    &__logo{
+        color: $fontColor;
+    }
+    &__brend{
+        width: 290px;
+    }
+    &__caption{
+        font: {
+            size: 13px;
+            weight: 100;
+        }
+        padding-top: 4px;
+    }
+    &__contact{
+        color: $fontColor;
+    }
+    &__contact-call{
+        font: {
+            size: 12px;
+            weight: 300;
+        }
+    }
+    &__number{
+        font-size: 22px;
+        text-align: center;
+    }
+    &__button{
+        padding: 16px 22px 13px;
+    }
 }
-.advantages .col-lg-6{
-    padding: 0 30px;
-    margin-bottom: 12px;
+/*Блок с кнопкой "Отправить заявку"*/
+.invite{
+    &__about{
+        color: $fontColor;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 123px;
+        h1{
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        h2{
+            font-size: 36px; 
+            margin-bottom: 24px;
+        }
+        p{
+            font-size: 18px;
+            margin-bottom: 58px;
+            &:not(:last-of-type){
+                margin-bottom: 38px;
+            }
+        }
+    }
+    &__button{
+        font-size: 18px;
+        padding: 25px 40px 22px;
+    }
 }
-.heading-2{
-    font-size: 38px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
+/*Конец header*/
+/*heading Слово в чёрном или белом прямоугольнике "ПРЕИМУЩЕСТВА" и текст снизу*/
+.heading{
+    &__2{
+        font: {
+            size: 38px;
+            weight: 700;
+        }
+        text-align: center;
+        text-transform: uppercase;
+        &_black{
+            color: $fontColor-black;
+        }
+        &_white{
+            color: $fontColor;
+        }
+    }
+    &__3{
+        padding: 8px 14px;
+        margin-bottom: 16px;
+        font-size: 11px;
+        text-transform: uppercase;
+        &_black{
+            background-color: $fontColor-black;
+            color: $fontColor;
+        }
+        &_white{
+            color: $fontColor-black;
+            background-color: $fontColor;
+        }
+    }
+    &__paragref{
+        font-size: 17px;
+        text-align: center;
+    }
+    &__paragref_black{
+        color: $fontColor-black;
+    }
+    &__paragref_white{
+        color: $fontColor;
+    }
 }
-.heading-2_black{
-    color: $fontColor-black;
-}
-.heading-2_white{
-    color: $fontColor;
-}
-.heading-3{
-    padding: 8px 14px;
-    margin-bottom: 16px;
-    font-size: 11px;
-    text-transform: uppercase;
-}
-.heading-3_black{
-    background-color: $fontColor-black;
-    color: $fontColor;
-}
-.heading-3_white{
-    color: $fontColor-black;
-    background-color: $fontColor;
-}
-.blue-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 116px;
-    height: 116px;
-    background-color: $fontColor-blue;
-    border-radius: 50%;
-    margin-right: 24px;
-}
-.about-block{
-    display: flex;
-    align-items: center;
-}
-.about-block__p_black{
-    font-size: 15px;
-    font-weight: 300;
-    color: #202020;
-}
-.about-block__p_blue{
-    font-size: 18px;
-    color: $fontColor-blue;
-}
+/*Конец heading */
+/*Стилизация main, названия взяты с слова в heading*/
+.advantages{
+    .col-lg-6{
+        padding: 0 30px;
+        margin-bottom: 12px;
+    }
+    &__p_black{
+        font: {
+            size: 15px;
+            weight: 300;
+        }
+        color: #202020;
+    }
+    &__p_blue{
+        font-size: 18px;
+        color: $fontColor-blue;
+    }
+    &__icon{
+        margin-right: 24px;
+    }
+} 
 .opportunities{
-    background-image: url(../img/mobile_bg.png);
-    background-position: center;
+    @include background('../img/mobile_bg.png', repeat, $size: auto);
+    &_blue-bg{
+        background-color: #070716;
+        padding-top: 58px;
+        .container-md{
+            padding-bottom: 300px;
+        }
+    }
+    &__description{
+        padding-top: 220px;
+        padding-bottom: 137px;
+    }
 }
-.heading__paragref{
-    font-size: 17px;
-    text-align: center;
-}
-.heading__paragref_black{
-    color: $fontColor-black;
-}
-.heading__paragref_white{
-    color: $fontColor;
-}
-.blue-bg{
-    background-color: #070716;
-    padding-top: 58px
-}
-[class^="card__bg-"] {
-    @include img-settings;
+[class^="cards__bg-"] {
     width: 100%;
     max-width: 320px;
     height: 280px;
     padding-top: 90px;
     padding-bottom: 34px;
-    @include flex-x-y-center;
-    justify-content: space-between;
 }
-.card__bg-1{
-    background-image: url(../img/card1.png);
-}
-.card__bg-2{
-    background-image: url(../img/card2.png);
-}
-.card__bg-3{
-    background-image: url(../img/card3.png);
-}
-.card__bg-4{
-    background-image: url(../img/card4.png);
-}
-.card__bg-5{
-    background-image: url(../img/card5.png);
-}
-.card__bg-6{
-    background-image: url(../img/card6.png);
-}
-.opportunities .col-lg-4{
-    display: flex;
-    justify-content: center;
-}
-.card__heading{
-    color: $fontColor;
-    font-size: 24px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-}
-.card__button{
-    @include flex-x-y-center;
-    background-color: #000000;
-    border-radius: 50%;
-    border: none;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-}
-.opportunities .blue-bg .container-md{
-    padding-bottom: 300px;
-}
-.description{
-    padding-top: 220px;
-    padding-bottom: 137px;
-}
-.list{
-    h2{
-        font-size: 22px;
+.cards{
+    &__bg-1{
+        @include background('../img/card1.png');
     }
-    ul{
-        list-style: none;
-        padding-left: 32px;
+    &__bg-2{
+        @include background('../img/card2.png');
     }
-    p{
-        font-size: 18px;
-        margin: 0;
-        padding-bottom: 10px;
+    &__bg-3{
+        @include background('../img/card3.png');
     }
-    li{
-        padding-bottom: 10px;
-        position: relative;
-        font-size: 18px;
-        color: $fontColor-black;
-        &::before{
-            position: absolute;
-            top: 3px;
-            left: -24px;
-            width: 21px;
-            height: 21px;
+    &__bg-4{
+        @include background('../img/card4.png');
+    }
+    &__bg-5{
+        @include background('../img/card5.png');
+    }
+    &__bg-6{
+        @include background('../img/card6.png');
+    }
+    &__heading{
+        color: $fontColor;
+        font: {
+            size: 24px;
+            weight: 400;
         }
+        text-transform: uppercase;
+        text-align: center;
     }
-}
-.list_blue{
-    h2{
-        color: #1CA8C3;
-    }
-    p{
-        color: #1CA8C3;
-    }
-    li{
-        &::before{
-            content: url("../icons/check_blue.png");
-        }
-    }
-}
-.list_red{
-    h2{
-        color: $fontColor-red;
-    }
-    p{
-        color: $fontColor-red;
-    }
-    li{
-        &::before{
-            content: url("../icons/check_red.png");
-        }
+    &__button{
+        background-color: #000000;
+        border-radius: 50%;
+        border: none;
+        width: 30px;
+        height: 30px;
+        padding: 0;
     }
 }
 .conditions{
@@ -303,25 +220,76 @@ $fontColor_footer-blue: #1FBAD6;
     .row{
         margin-bottom: 36px;
     }
+    &__list{
+        h2{
+            font-size: 22px;
+        }
+        ul{
+            list-style: none;
+            padding-left: 32px;
+        }
+        p{
+            font-size: 18px;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        li{
+            padding-bottom: 10px;
+            position: relative;
+            font-size: 18px;
+            color: $fontColor-black;
+            &::before{
+                position: absolute;
+                top: 3px;
+                left: -24px;
+                width: 21px;
+                height: 21px;
+            }
+        }
+        &_blue{
+            h2{
+                color: #1CA8C3;
+            }
+            p{
+                color: #1CA8C3;
+            }
+            li{
+                &::before{
+                    content: url("../icons/check_blue.png");
+                }
+            }
+        }
+        &_red{
+            h2{
+                color: $fontColor-red;
+            }
+            p{
+                color: $fontColor-red;
+            }
+            li{
+                &::before{
+                    content: url("../icons/check_red.png");
+                }
+            }
+        }
+    }
 }
+/*Блок с картой мира*/
 .cities{
     background-color: #080816;
     padding: 46px 0;
     height: 716px;
+    &__bg{
+        @include background('../img/world_bg.png', $size: auto);
+    }
+    &__show{
+        font-size: 16px;
+        color: $fontColor_footer-blue;
+        cursor: pointer;
+    }
 }
-.cities-bg{
-    background: url("../img/world_bg.png") no-repeat center / auto;
-}
-.show{
-    font-size: 16px;
-    color: $fontColor_footer-blue;
-    cursor: pointer;
-}
-.line{
-    height: 7px;
-    width: 300px;
-    background-color: $fontColor_footer-blue;
-}
+/*Конец main*/
+/*Footer*/
 .footer{
     padding-bottom: 66px;
     ul{
@@ -330,7 +298,12 @@ $fontColor_footer-blue: #1FBAD6;
     li{
         cursor: pointer;
     }
-    .links{
+    &__line{
+        height: 7px;
+        width: 300px;
+        background-color: $fontColor_footer-blue;
+    }
+    &__links{
         text-transform: uppercase;
         ul:first-of-type{
             li{
@@ -354,34 +327,49 @@ $fontColor_footer-blue: #1FBAD6;
             margin: 0;
         }
     }
+    &__dowload{
+        align-items: start;
+        justify-content: end;
+    }
     figure{
         margin: 0;
     }
 }
-.dowload{
-    align-items: start;
-    justify-content: end;
-}
+/*Конец footer*/
+/*Пару кастомных padding*/
 .pt-6{
     padding-top: 58px;
 }
 .pb-6{
     padding-bottom: 64px;
 }
+/*Синяя кнопка. Размеры кнопки регулируются в родителе*/
+.button{
+    text-transform: uppercase;
+    font-size: 14px;
+    background: linear-gradient(to bottom, $fontColor-blue, #4CE2FF);
+    color: $fontColor;
+    border: none;
+    border-bottom:3px solid $fontColor-blue;
+    border-radius: 4px;
+}
 @media (max-width: 1200px) {
-    .header-about{
-        padding-top: 40px;
-        padding-bottom: 34px;
-        h1{
-            font-size: 42px;
-        }
-        h2{
-            font-size: 28px;
+    .invite{
+        &__about{
+            padding-top: 40px;
+            padding-bottom: 34px;
+            h1{
+                font-size: 42px;
+            }
+            h2{
+                font-size: 28px;
+            }
         }
     }
-    .header__button_top{
-        padding: 12px 18px;
-        padding-bottom: 9px;
+    .logo-contact{
+        &__button{
+            padding: 12px 18px 9px;
+        }
     }
 }
 @media (max-width: 992px) {
@@ -393,40 +381,43 @@ $fontColor_footer-blue: #1FBAD6;
     .heading-2{
         font-size: 26px;
     }
-    .logo-icon-name{
-        width: 242px;
-        height: 27px;
-    }
-    .uber-number{
-        font-size: 18px;
-    }
-    .header-about{
-        padding-top: 40px;
-        padding-bottom: 34px;
-        h1{
-            font-size: 34px;
+    .logo-contact{
+        &__brend{
+            width: 242px;
         }
-        h2{
-            font-size: 24px;
+        &__number{
+            font-size: 18px;
         }
     }
-    .button_about{
-        padding: 20px 35px;
-        padding-bottom: 17px;
+    .invite{
+        &__about{
+            padding-top: 40px;
+            padding-bottom: 34px;
+            h1{
+                font-size: 34px;
+            }
+            h2{
+                font-size: 24px;
+            }
+        }
+        &__button{
+            padding: 20px 35px 17px;
+        }
     }
-    .about-block{
-        flex-direction: column;
+    .advantages{
+        &__block{
+            flex-direction: column;
+        }
     }
-    [class^="card__bg-"] {
+    [class^="cards__bg-"] {
         max-width: 520px;
     }
-    .opportunities .blue-bg .container-md{
+    .opportunities .opportunities_blue-bg .container-md{
         padding-bottom: 0;
     }
     .conditions{
         .container-md{
-            padding-top: 48px;
-            padding-bottom: 50px;
+            padding-top: 50px;
         }
         .row{
             margin-bottom: 26px;
@@ -436,87 +427,103 @@ $fontColor_footer-blue: #1FBAD6;
         padding: 38px 0;
         height: 600px;
     }
-    .social{
-        display: flex;
-        justify-content: center;
-    }
-    .dowload{
-        justify-content: center;
-    }
     .footer{
         padding-bottom: 30px;
+        &__social{
+            display: flex;
+            justify-content: center;
+        }
+        &__dowload{
+            justify-content: center;
+        }
     }
 }
 @media (max-width: 768px) {
-    .logo-icon-name{
+    .logo-contact__brend{
         width: 205px;
-        height: 23px;
     }
 }
 @media (max-width: 576px) {
-    .logo-icon-name{
-        width: 180px;
-        height: 19.6px;
-    }
-    .uber-number{
-        font-size: 12px;
-    }
-    .header__button_top{
-        font-size: 10px;
-        padding: 7px 9px;
-        padding-bottom: 4px;
+    .logo-contact{
+        &__brend{
+            width: 180px;
+        }
+        &__number{
+            font-size: 12px;
+        }
+        &__button{
+            font-size: 10px;
+            padding: 10px 12px 7px;
+        }
     }
     .heading-2{
         font-size: 16px;
     }
-    .header-about{
-        padding-top: 40px;
-        padding-bottom: 34px;
-        h1{
-            font-size: 30px;
+    .invite{
+        &__about{
+            padding-top: 40px;
+            padding-bottom: 34px;
+            h1{
+                font-size: 30px;
+            }
+            h2{
+                font-size: 20px;
+            }
         }
-        h2{
-            font-size: 20px;
+        &__button{
+            padding: 20px 25px 17px;
         }
-    }
-    .button_about{
-        padding: 20px 25px;
-        padding-bottom: 17px;
     }
     .advantages .col-lg-6{
         padding: 0 15px;
     }
-    [class^="card__bg-"] {
-        max-width: 320px;
-    }
-    .blue-bg{
+    .opportunities_blue-bg{
         padding-top: 22px;
-    }
-    .list{
-        h2{
-            font-size: 16px;
-        }
-        p{
-            font-size: 14px;
-        }
-        li{
-            font-size: 14px;
-        }
     }
     .conditions{
         .container-md{
-            padding-top: 24px;
-            padding-bottom: 24px;
+            padding: 24px;
         }
         .row{
             margin-bottom: 26px;
+        }
+        &__list{
+            h2{
+                font-size: 16px;
+            }
+            p{
+                font-size: 14px;
+            }
+            li{
+                font-size: 14px;
+            }
         }
     }
     .cities{
         padding: 24px 0;
         height: 360px;
+        &__bg{
+            background-size: cover;
+        }
     }
-    .cities-bg{
-        background-size: cover;
+    .footer{
+        &__links{
+            ul:first-of-type{
+                max-width: 400px;
+                width: 100%;
+                justify-content: space-between;
+                li{
+                    font-size: 14px;
+                }
+                li:not(:last-of-type){
+                   margin-right: 0;
+                }  
+            }
+            ul:nth-of-type(2){
+                li:not(:last-of-type){
+                    margin-right: 10px;
+                 }   
+            }
+        }
     }
 }

@@ -11,7 +11,6 @@
     </style>
     <title>Document</title>
 </head>
-
 <body>
     <header class="header">
         <section class="header__top">
@@ -47,121 +46,125 @@
             </nav>
         </section>
         <section class="header__bottom position-relative">
-            <div class="dark-bg">
-                <article class="container-md">
+            <article class="logo-contact">
+                <div class="container-md">
                     <div class="row header-contacts py-3">
                         <div class="col-md-4 offset-md-1 col-6 d-flex align-items-center">
-                            <figure class="logo m-0">
-                                <div class="logo-icon-name"></div>
-                                <figcaption class="d-none d-lg-block logo_caption">Официальный партнер Uber в Москве</figcaption>
+                            <figure class="logo-contact__logo m-0">
+                                <a class="logo-contact__brend logo d-block">
+                                    <img class="logo-contact__image img-fluid" src="icons/Uber.png" alt="">
+                                </a>
+                                <figcaption class="logo-contact__caption d-none d-lg-block">Официальный партнер Uber в Москве</figcaption>
                             </figure>
                         </div>
                         <div class="col-md-4 offset-md-2 col-6">
-                            <div class="d-flex justify-content-end header__contact">
+                            <div class="logo-contact__contact d-flex justify-content-end">
                                 <address class="m-0 me-4 d-none d-lg-block">
-                                    <p class="m-0 text-end header__contact-call">Звоните нам ежедневно</p>
-                                    <p class="m-0 text-nowrap uber-number">8 495 797 09 88</p>
+                                    <p class="logo-contact__contact-call m-0 text-end ">Звоните нам ежедневно</p>
+                                    <p class="logo-contact__number m-0 text-nowrap ">8 495 797 09 88</p>
                                 </address>
                                 <div>
-                                    <p class="m-0 uber-number d-md-block d-lg-none">8 495 797 09 88</p>
-                                    <button class="m-0 text-nowrap button header__button_top">заказать звонок</button>
+                                    <p class="logo-contact__number m-0 d-md-block d-lg-none">8 495 797 09 88</p>
+                                    <button class="button logo-contact__button m-0 text-nowrap">заказать звонок</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </article>
-            </div>
-            <div class="container-md">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1 header-about">
-                        <h1 class="text-uppercase fw-bold">Компания uber partners!</h1>
-                        <h2 class="text-uppercase fw-semibold">Приглашаем водителей! На своем авто!</h2>
-                        <p class="d-none d-lg-block">Компания UBER  динамически развивающаяся. Компания на рынке занимает лидирующее место среди таксомоторных компаний, Компания абсолютно прозрачная вы можете контролировать все процессы у себя в личном кабинете. Бонуcная система.Помимо выполненной работы по заказам, компания начисляет бонусы за пиковое время.</p>
-                        <p class="d-none d-lg-block">Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе Москве.  Водители у нас зарабатывают от 80000- 120000 в месяц.</p>
-                        <button class="button button_about">Отправить заявку!</button>
+                </div>
+            </article>
+            <article class="invite">
+                <div class="container-md">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 invite__about">
+                            <h1 class="text-uppercase fw-bold">Компания uber partners!</h1>
+                            <h2 class="text-uppercase fw-semibold">Приглашаем водителей! На своем авто!</h2>
+                            <p class="d-none d-lg-block">Компания UBER  динамически развивающаяся. Компания на рынке занимает лидирующее место среди таксомоторных компаний, Компания абсолютно прозрачная вы можете контролировать все процессы у себя в личном кабинете. Бонуcная система.Помимо выполненной работы по заказам, компания начисляет бонусы за пиковое время.</p>
+                            <p class="d-none d-lg-block">Мы одни из партнеров и зарекомендовали себя как одна из лучших команд в городе Москве.  Водители у нас зарабатывают от 80000- 120000 в месяц.</p>
+                            <button class="button invite__button">Отправить заявку!</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
     </header>
     <main class="main">
         <section class="advantages">
             <article class="container-md">
                 <div class="row">
-                    <div class="col d-flex justify-content-center align-items-center flex-column p-3">
-                        <h3 class="heading-3 heading-3_black">преимущества</h3>
-                        <h2 class="heading-2">8 причин начать работать с нами</h2>
+                    <div class="advantages__heading heading col d-flex justify-content-center align-items-center flex-column p-3">
+                        <h3 class="heading__3 heading__3_black">преимущества</h3>
+                        <h2 class="heading__2">8 причин начать работать с нами</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 d-flex">
-                        <div class="about-block">
-                            <div class="blue-icon">
-                                <img src="icons/Rectangle.png" alt="">
-                            </div>
-                            <p class="about-block__p_black"><span class="about-block__p_blue d-block">Никаких наличных, оплата происходит автоматически</span>Стоимость поездки оплачивается пассажиром с привязанной банковской карты, т.е. нет никаких рисков связанных с перевозкой наличности как для пассажира, так и для водителя, Вам не нужно искать мелкие деньги для размена.</p>
+                        <div class="advantages__block d-flex align-items-center">
+                            <figure class="advantages__icon">
+                                <img src="icons/El1.png" alt="">
+                            </figure>
+                            <p class="advantages__p_black"><span class="advantages__p_blue d-block">Никаких наличных, оплата происходит автоматически</span>Стоимость поездки оплачивается пассажиром с привязанной банковской карты, т.е. нет никаких рисков связанных с перевозкой наличности как для пассажира, так и для водителя, Вам не нужно искать мелкие деньги для размена.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex">
-                        <div class="about-block">
-                            <div class="blue-icon">
-                                <img src="icons/Rectangle (1).png" alt="">
-                            </div>
-                            <p class="about-block__p_black"><span class="about-block__p_blue d-block">Комиссия 8% + БОНУСЫ</span>У нас минимальная комиссия и мы выплачиваем бонусы за каждую поездку, некоторые наши конкуренты оставляют бонусы себе. Мы работаем честно и с нами водители зарабатывают больше!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 d-flex">
-                        <div class="about-block">
-                            <div class="blue-icon">
-                                <img src="icons/Rectangle (2).png" alt="">
-                            </div>
-                            <p class="about-block__p_black"><span class="about-block__p_blue d-block">Высокий доход с гарантированными выплатами</span>Мы выплачиваем заработную плату на личную банковскую карту водителя! Вам не нужно оформлять ООО, ИП, платить налоги, подавать декларацию, оплачивать бухгалтерские услуги и ведение банковского счета.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 d-flex">
-                        <div class="about-block">
-                            <div class="blue-icon">
-                                <img src="icons/Rectangle (3).png" alt="">
-                            </div>
-                            <p class="about-block__p_black"><span class="about-block__p_blue d-block">Работа в удобное время, никаких графиков</span>Вы просто нажимаете кнопку выйти на линию для начала работы, когда решите закончить, нажимаете выйти с линии. Вы можете подраба-тывать только утром, вечером, в выходные или праздничные дни! </p>
+                        <div class="advantages__block d-flex align-items-center">
+                            <figure class="advantages__icon">
+                                <img src="icons/El2.png" alt="">
+                            </figure>
+                            <p class="advantages__p_black"><span class="advantages__p_blue d-block">Комиссия 8% + БОНУСЫ</span>У нас минимальная комиссия и мы выплачиваем бонусы за каждую поездку, некоторые наши конкуренты оставляют бонусы себе. Мы работаем честно и с нами водители зарабатывают больше!</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 d-flex">
-                        <div class="about-block">
-                            <div class="blue-icon">
-                                <img src="icons/Rectangle (4).png" alt="">
-                            </div>
-                            <p class="about-block__p_black"><span class="about-block__p_blue d-block">Комфортное, прозрачное и простое подключение</span>Мы подключаем дистанционно и бесплатно, Вам нет необходимости приезжать к нам! Вы присылаете нам копии документов, мы регистрируем Вас и присылаем данные для подключения, через 1-2 дня Вы можете начинать работать!</p>
+                        <div class="advantages__block d-flex align-items-center">
+                            <figure class="advantages__icon">
+                                <img src="icons/El3.png" alt="">
+                            </figure>
+                            <p class="advantages__p_black"><span class="advantages__p_blue d-block">Высокий доход с гарантированнымивыплатами</span>Мы выплачиваем заработную плату на личную банковскую карту водителя! Вам не нужно оформлять ООО, ИП, платить налоги, подавать декларацию, оплачивать бухгалтерские услуги и ведение банковского счета.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex">
-                        <div class="about-block">
-                            <div class="blue-icon">
-                                <img src="icons/Rectangle (5).png" alt="">
-                            </div>
-                            <p class="about-block__p_black"><span class="about-block__p_blue d-block">Всегда большое количество заказов</span>Приложение показывает, где на данный момент больше всего заказов и где действуют повышенные тарифы. У Вас не будет простоя и холостых пробегов. Наши пассажиры всегда приятные и абсолютно неконфликтные люди, которых приятно возить.</p>
+                        <div class="advantages__block d-flex align-items-center">
+                            <figure class="advantages__icon">
+                                <img src="icons/El4.png" alt="">
+                            </figure>
+                            <p class="advantages__p_black"><span class="advantages__p_blue d-block">Работа в удобное время, никакихграфиков</span>Вы просто нажимаете кнопку выйти на линию для начала работы, когда решите закончить, нажимаете выйти с линии. Вы можете подраба-тывать только утром, вечером, в выходные или праздничные дни! </p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 d-flex">
-                        <div class="about-block">
-                            <div class="blue-icon">
-                                <img src="icons/Rectangle (6).png" alt="">
-                            </div>
-                            <p class="about-block__p_black"><span class="about-block__p_blue d-block">Круглосуточная поддержка</span>В Uber действует круглосуточная поддержка водителей по электронной почте. Если что-то непонятно, Вы всегда можете задать вопрос через On-line консультацию.</p>
+                        <div class="advantages__block d-flex align-items-center">
+                            <figure class="advantages__icon">
+                                <img src="icons/El5.png" alt="">
+                            </figure>
+                            <p class="advantages__p_black"><span class="advantages__p_blue d-block">Комфортное, прозрачное и простое подключение</span>Мы подключаем дистанционно и бесплатно, Вам нет необходимости приезжать к нам! Вы присылаете нам копии документов, мы регистрируем Вас и присылаем данные для подключения, через 1-2 дня Вы можете начинать работать!</p>
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex">
-                        <div class="about-block">
-                            <div class="blue-icon">
-                                <img src="icons/Rectangle (7).png" alt="">
-                            </div>
-                            <p class="about-block__p_black"><span class="about-block__p_blue d-block">Без шашечек и наклеек</span>Вам не нужно менять цвет, устанавливать «шашки» на автомобиль и обклеивать его наклейками.</p>
+                        <div class="advantages__block d-flex align-items-center">
+                            <figure class="advantages__icon">
+                                <img src="icons/El6.png" alt="">
+                            </figure>
+                            <p class="advantages__p_black"><span class="advantages__p_blue d-block">Всегда большое количество заказов</span>Приложение показывает, где на данный момент больше всего заказов и где действуют повышенные тарифы. У Вас не будет простоя и холостых пробегов. Наши пассажиры всегда приятные и абсолютно неконфликтные люди, которых приятно возить.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 d-flex">
+                        <div class="advantages__block d-flex align-items-center">
+                            <figure class="advantages__icon">
+                                <img src="icons/El7.png" alt="">
+                            </figure>
+                            <p class="advantages__p_black"><span class="advantages__p_blue d-block">Круглосуточная поддержка</span>В Uber действует круглосуточная поддержка водителей по электронной почте. Если что-то непонятно, Вы всегда можете задать вопрос через On-line консультацию.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex">
+                        <div class="advantages__block d-flex align-items-center">
+                            <figure class="advantages__icon">
+                                <img src="icons/El8.png" alt="">
+                            </figure>
+                            <p class="advantages__p_black"><span class="advantages__p_blue d-block">Без шашечек и наклеек</span>Вам не нужно менять цвет, устанавливать «шашки» на автомобиль и обклеивать его наклейками.</p>
                         </div>
                     </div>
                 </div>
@@ -170,59 +173,59 @@
         <section class="opportunities pt-5">
             <article class="container-md pb-6">
                 <div class="row mb-3">
-                    <div class="col d-flex justify-content-center align-items-center flex-column heading">
-                        <h3 class="heading-3 heading-3_black">возможности</h3>
-                        <h2 class="heading-2 heading-2_black">мобильное приложение убер</h2>
+                    <div class="heading col d-flex justify-content-center align-items-center flex-column">
+                        <h3 class="heading__3 heading__3_black">возможности</h3>
+                        <h2 class="heading__2 heading__2_black">мобильное приложение убер</h2>
                         <p class="heading__paragref heading__paragref_black">Сделайте заказ, совершите поездку и оплатите ее стоимость, используя свой мобильный телефон</p>
                     </div>
                 </div>
                 <div class="row mb-3 g-4">
-                    <div class="col-lg-4">
-                        <div class="card__bg-1">
-                            <h2 class="card__heading">оформление заказа одним касанием</h2>
-                            <button class="card__button"><img src="icons/plus.png" alt=""></button>
+                    <div class="cards col-lg-4 d-flex justify-content-center">
+                        <div class="cards__bg-1 d-flex flex-column align-items-center justify-content-between">
+                            <h2 class="cards__heading">оформление заказа одним касанием</h2>
+                            <button class="cards__button d-flex flex-column align-items-center justify-content-center"><img src="icons/plus.png" alt=""></button>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card__bg-2">
-                            <h2 class="card__heading">надежная подача</h2>
-                            <button class="card__button"><img src="icons/plus.png" alt=""></button>
+                    <div class="cards col-lg-4 d-flex justify-content-center">
+                        <div class="cards__bg-2 d-flex flex-column align-items-center justify-content-between">
+                            <h2 class="cards__heading">надежная подача</h2>
+                            <button class="cards__button d-flex flex-column align-items-center justify-content-center"><img src="icons/plus.png" alt=""></button>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card__bg-3">
-                            <h2 class="card__heading">прозрачные</h2>
-                            <button class="card__button"><img src="icons/plus.png" alt=""></button>
+                    <div class="cards col-lg-4 d-flex justify-content-center">
+                        <div class="cards__bg-3 d-flex flex-column align-items-center justify-content-between">
+                            <h2 class="cards__heading">прозрачные</h2>
+                            <button class="cards__button d-flex flex-column align-items-center justify-content-center"><img src="icons/plus.png" alt=""></button>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-3 g-4">
-                    <div class="col-lg-4">
-                        <div class="card__bg-4">
-                            <h2 class="card__heading">безналичная оплата</h2>
-                            <button class="card__button"><img src="icons/plus.png" alt=""></button>
+                    <div class="cards col-lg-4 d-flex justify-content-center">
+                        <div class="cards__bg-4 d-flex flex-column align-items-center justify-content-between">
+                            <h2 class="cards__heading">безналичная оплата</h2>
+                            <button class="cards__button d-flex flex-column align-items-center justify-content-center"><img src="icons/plus.png" alt=""></button>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card__bg-5">
-                            <h2 class="card__heading">обратная связь</h2>
-                            <button class="card__button"><img src="icons/plus.png" alt=""></button>
+                    <div class="cards col-lg-4 d-flex justify-content-center">
+                        <div class="cards__bg-5 d-flex flex-column align-items-center justify-content-between">
+                            <h2 class="cards__heading">обратная связь</h2>
+                            <button class="cards__button d-flex flex-column align-items-center justify-content-center"><img src="icons/plus.png" alt=""></button>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="card__bg-6">
-                            <h2 class="card__heading">разделить стоимость поездки</h2>
-                            <button class="card__button"><img src="icons/plus.png" alt=""></button>
+                    <div class="cards col-lg-4 d-flex justify-content-center">
+                        <div class="cards__bg-6 d-flex flex-column align-items-center justify-content-between">
+                            <h2 class="cards__heading">разделить стоимость поездки</h2>
+                            <button class="cards__button d-flex flex-column align-items-center justify-content-center"><img src="icons/plus.png" alt=""></button>
                         </div>
                     </div>
                 </div>
             </article>
-            <article class="blue-bg">
+            <article class="opportunities_blue-bg">
                 <div class="container-md">
                     <div class="row">
-                        <figure class="col position-relative d-flex justify-content-center align-items-center flex-column heading">
-                            <h3 class="heading-3 heading-3_white">возможности</h3>
-                            <h2 class="d-none d-lg-block heading-2 heading-2_white">мобильное приложение убер</h2>
+                        <figure class="heading col position-relative d-flex justify-content-center align-items-center flex-column">
+                            <h3 class="heading__3 heading__3_white">возможности</h3>
+                            <h2 class="d-none d-lg-block heading__2 heading__2_white">мобильное приложение убер</h2>
                             <p class="d-none d-lg-block heading__paragref heading__paragref_white">Сделайте заказ, совершите поездку и оплатите ее стоимость, используя свой мобильный телефон</p>
                             <img class="d-none d-lg-block position-absolute img-fluid flex-shrink-1 top-100 car" src="img/car.png" alt="">
                             <img class="d-md-block d-lg-none img-fluid flex-shrink-1 car" src="img/car.png" alt="">
@@ -231,7 +234,7 @@
                     </div>
                 </div>
             </article>
-            <article class="container-md d-none d-lg-block description ">
+            <article class="heading opportunities__description container-md d-none d-lg-block">
                 <p class="m-0 fw-light heading__paragref heading__paragref_black">Машины на каждый день.</p>
                 <p class="m-0 fw-light heading__paragref heading__paragref_black">Лучше, быстрее и дешевле, чем такси</p>
             </article>
@@ -239,13 +242,13 @@
         <section class="conditions">
             <article class="container-md">
                 <div class="row">
-                    <div class="col d-flex justify-content-center align-items-center flex-column heading">
-                        <h3 class="heading-3 heading-3_black">возможности</h3>
-                        <h2 class="heading-2 heading-2_black">условия и требования</h2>
+                    <div class="heading col d-flex justify-content-center align-items-center flex-column heading">
+                        <h3 class="heading__3 heading__3_black">возможности</h3>
+                        <h2 class="heading__2 heading__2_black">условия и требования</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 list list_blue">
+                    <div class="col-md-6 conditions__list conditions__list_blue">
                         <h2>УСЛОВИЯ: со своим авто:</h2>
                         <ul>
                             <li class="fw-light">Подключаем к системе UBER  под 10%.</li>
@@ -258,7 +261,7 @@
                         </ul>
                         <p class="fw-light">В день заработок составляет 7000-12000р + бонус 3000т рублей</p>
                     </div>
-                    <div class="col-md-6 list list_blue">
+                    <div class="col-md-6 conditions__list conditions__list_blue">
                         <h2>УСЛОВИЯ: на авто компании:</h2>
                         <ul>
                             <li class="fw-light">Предоставляем авто без залога</li>
@@ -268,7 +271,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 list list_red">
+                    <div class="col-md-6 conditions__list conditions__list_red">
                         <h2>ТРЕБОВАНИЕ:</h2>
                         <ul>
                             <li class="fw-light">Наличие автомобиля без рекламы</li>
@@ -278,7 +281,7 @@
                             <li class="fw-light">Девайс на системе андроид 4.0 и выше(самсунг)</li>
                         </ul>
                     </div>
-                    <div class="col-md-6 list list_red">
+                    <div class="col-md-6 conditions__list conditions__list_red">
                         <h2>ДОКУМЕНТЫ:</h2>
                         <ul>
                             <li class="fw-light">Права 2 стороны</li>
@@ -294,32 +297,32 @@
             </article>
         </section>
         <section class="cities position-relative ">
-            <div class="cities-bg position-absolute top-50 start-50 translate-middle w-100 h-100 "></div>
-            <div class="container-md d-flex justify-content-between flex-column h-100 position-relative z-1">
-                <article class="row">
-                    <div class="col-md d-flex flex-column align-items-center">
-                        <h3 class="heading-3 heading-3_white">Города</h3>
-                        <h2 class="heading-2 heading-2_white">По всему миру</h2>
+            <article class="cities__bg position-absolute top-50 start-50 translate-middle w-100 h-100 "></article>
+            <article class="container-md d-flex justify-content-between flex-column h-100 position-relative z-1">
+                <div class="row">
+                    <div class="heading col-md d-flex flex-column align-items-center">
+                        <h3 class="heading__3 heading__3_white">Города</h3>
+                        <h2 class="heading__2 heading__2_white">По всему миру</h2>
                         <p class="heading__paragref heading__paragref_white">Мы в вашем городе и по всему миру</p>
                     </div>
-                </article>
-                <article class="row">
+                </div>
+                <div class="row">
                     <div class="col-md d-flex justify-content-center">
-                        <p class="show text-uppercase text-center">посмотреть все города</p>
+                        <p class="cities__show text-uppercase text-center">посмотреть все города</p>
                     </div>
-                </article>
-            </div>
+                </div>
+            </article>
         </section>
     </main>
     <footer class="footer">
-        <div class="container-fluid">
-            <div class="row py-3">
+        <section class="container-fluid">
+            <article class="row py-3">
                 <div class="col d-flex justify-content-center ">
-                    <div class="line"></div>
+                    <div class="footer__line"></div>
                 </div>
-            </div>
+            </article>
             <article class="row">
-                <figure class="col-lg-3 order-2 order-lg-1 social">
+                <figure class="footer__social col-lg-3 order-2 order-lg-1">
                     <ul class="d-flex ps-3">
                         <li class="me-2"><img src="icons/facebook.png" alt=""></li>
                         <li class="me-2"><img src="icons/twitter.png" alt=""></li>
@@ -327,10 +330,10 @@
                         <li class="me-2"><img src="icons/instagram.png" alt=""></li>
                     </ul>
                 </figure>
-                <div class="col-lg-6 order-1 order-lg-2 links d-flex flex-column align-items-center">
+                <div class="footer__links col-lg-6 order-1 order-lg-2 d-flex flex-column align-items-center">
                     <ul class="d-flex p-0">
                         <li class="fw-light">На главную</li>
-                        <li class="fw-light">Центре поддержки</li>
+                        <li class="fw-light">Города</li>
                         <li class="fw-light">Для водителей</li>
                     </ul>
                     <ul class="d-flex p-0">
@@ -342,16 +345,15 @@
                     </ul>
                     <p>Русский</p>
                 </div>
-                <figure class="col-lg-3 order-3 order-lg-3 d-flex dowload">
+                <figure class="footer__dowload col-lg-3 order-3 order-lg-3 d-flex">
                     <img src="icons/dowload.png" alt="">
                 </figure>
             </article>
-        </div>
+        </section>
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
