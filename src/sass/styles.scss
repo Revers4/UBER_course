@@ -9,6 +9,9 @@
     &__top {
         .navbar{
             background-color: $fontColor-black;
+            &-toggler{
+                border: none;
+            }
             &-nav{
                 li:not(:last-of-type){
                     border-right: dotted #000000 2px;
@@ -336,13 +339,6 @@
     }
 }
 /*Конец footer*/
-/*Пару кастомных padding*/
-.pt-6{
-    padding-top: 58px;
-}
-.pb-6{
-    padding-bottom: 64px;
-}
 /*Синяя кнопка. Размеры кнопки регулируются в родителе*/
 .button{
     text-transform: uppercase;
@@ -412,8 +408,12 @@
     [class^="cards__bg-"] {
         max-width: 520px;
     }
-    .opportunities .opportunities_blue-bg .container-md{
-        padding-bottom: 0;
+    .opportunities{
+        &_blue-bg{
+            .container-md{
+                padding-bottom: 0;
+            }
+        }
     }
     .conditions{
         .container-md{
@@ -446,7 +446,7 @@
 @media (max-width: 576px) {
     .logo-contact{
         &__brend{
-            width: 180px;
+            width: 160px;
         }
         &__number{
             font-size: 12px;
